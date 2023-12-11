@@ -1,0 +1,136 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                     White Bird EA |
+//|                                         Developer: Forex Robot Easy Team |
+//|                                          Developer's site: forexroboteasy.com |
+//+------------------------------------------------------------------+
+//| Terms of Reference - Writing Code for White Bird Product         |
+//|                                                                 |
+//| This code implements the necessary functions for the White Bird  |
+//| EA software, including order placement, execution, stop-loss and |
+//| take-profit functions, trailing stop, risk management, equity    |
+//| monitoring, and security level control.                          |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                        Utility Functions                          |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+// Function to place an order
+void PlaceOrder(double lot, ENUM_ORDER_TYPE orderType, double price)
+{
+    // Place order logic here
+}
+
+// Function to execute an order
+void ExecuteOrder(double price)
+{
+    // Execute order logic here
+}
+
+// Function to set stop-loss and take-profit levels
+void SetStopLossTakeProfit(double stopLoss, double takeProfit)
+{
+    // Set stop-loss and take-profit logic here
+}
+
+// Function to set trailing stop
+void SetTrailingStop(double trailingStop)
+{
+    // Set trailing stop logic here
+}
+
+// Function for risk management based on equity level
+void ManageRisk(double equity)
+{
+    // Risk management logic here
+}
+
+// Function to monitor equity level
+void MonitorEquity(double equity)
+{
+    // Equity monitoring logic here
+}
+
+// Function to control security level
+void ControlSecurityLevel(double securityLevel)
+{
+    // Security level control logic here
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                 Main Functions for Trading Modes                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+// Function for Challenge Funders mode
+void ChallengeFundersMode()
+{
+    // Customizable logic for Challenge Funders mode here
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                       White Bird EA Software                      |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+// Main function for the White Bird EA software
+void OnTick()
+{
+    // Get market conditions
+    double distanceBetweenOrders = GetDistanceBetweenOrders();
+    double lotSize = GetLotSize();
+    double equityLevel = GetEquityLevel();
+    double securityLevel = GetSecurityLevel();
+
+    // Adjust algorithm to market conditions
+    AdjustAlgorithm(distanceBetweenOrders, lotSize, equityLevel, securityLevel);
+
+    // Execute trading modes
+    ChallengeFundersMode();
+}
+
+// Function to get distance between orders
+double GetDistanceBetweenOrders()
+{
+    // Get distance between orders logic here
+    return 10.0;
+}
+
+// Function to get lot size
+double GetLotSize()
+{
+    // Get lot size logic here
+    return 0.01;
+}
+
+// Function to get equity level
+double GetEquityLevel()
+{
+    // Get equity level logic here
+    return 10000.0;
+}
+
+// Function to get security level
+double GetSecurityLevel()
+{
+    // Get security level logic here
+    return 0.5;
+}
+
+// Function to adjust algorithm based on market conditions
+void AdjustAlgorithm(double distanceBetweenOrders, double lotSize, double equityLevel, double securityLevel)
+{
+    // Adjust algorithm logic here
+    PlaceOrder(lotSize, ORDER_TYPE_BUY, 1.0);
+    ExecuteOrder(1.0);
+    SetStopLossTakeProfit(50.0, 100.0);
+    SetTrailingStop(20.0);
+    ManageRisk(equityLevel);
+    MonitorEquity(equityLevel);
+    ControlSecurityLevel(securityLevel);
+}
